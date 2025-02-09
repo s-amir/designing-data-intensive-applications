@@ -158,8 +158,14 @@ The concept of data locality is not unique to document databases. Other database
 
 1.Google Spanner allows relational tables to be interleaved for better locality.   
 2.Oracle supports multi-table index cluster tables.   
-3.Bigtable-based databases (Cassandra, HBase) use column families to manage locality.   
+3.Bigtable-based databases (Cassandra, HBase) use column families to manage locality.     
 
+####‌ Declarative languages focus on what the program should accomplish without specifying how it should be done. You describe the desired result, and the system figures out the steps (e.g., SQL, HTML).
+
+#### Imperative languages focus on how to achieve the result. You define the exact sequence of steps to perform (e.g., Python, Java).
+
+Declarative: Easier, more concise, but less control over execution.
+Imperative: More control, but requires specifying each step, which can be more complex.
 
 
 
