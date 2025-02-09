@@ -156,7 +156,7 @@ Thus, keeping documents small and avoiding size-increasing updates is recommende
 #### Locality in Other Database Models
 The concept of data locality is not unique to document databases. Other database systems also optimize locality:
 
-1.Google Spanner allows relational tables to be interleaved for better locality.
+1.Google Spanner allows relational tables to be interleaved for better locality.   
 2.Oracle supports multi-table index cluster tables.
 3.Bigtable-based databases (Cassandra, HBase) use column families to manage locality.
 
