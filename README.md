@@ -127,6 +127,39 @@ Design reusable components to improve efficiency and software quality.
 Evolvability: Designing for Change
 Software requirements will inevitably change over time due to business needs, regulations, or system growth. A system designed with evolvability in mind is easier to modify and adapt.
 
+____
+____
+## Relational vs. Document Databases Today
+#### Document Model Advantages:
+
+Schema flexibility: No rigid table structure; easier schema evolution.
+Performance benefits: Locality of related data improves read performance.
+Closer alignment with application data structures.
+#### Relational Model Advantages:
+
+Better support for joins: Handles many-to-many relationships more efficiently.
+Optimized query execution: Automatic selection of best access paths.
+Simplicity for interconnected data: Avoids excessive denormalization.
+#### Schema-on-Write vs. Schema-on-Read
+Relational databases enforce schemas at write time ("schema-on-write"), ensuring data consistency but requiring migrations when structure changes.
+Document databases use "schema-on-read", allowing flexible data storage but requiring application logic to handle different formats dynamically.
+
+### Data locality 
+Document databases store data as a single continuous string (e.g., JSON, XML, or BSON). This locality of storage can improve performance when applications frequently retrieve entire documents, reducing the need for multiple index lookups and disk seeks.
+
+However, this advantage diminishes when:
+
+Only a small part of a document is needed, as the entire document must still be loaded.
+Updates increase the document’s size, requiring a full rewrite instead of an in-place modification.
+Thus, keeping documents small and avoiding size-increasing updates is recommended to maintain performance.
+
+#### Locality in Other Database Models
+The concept of data locality is not unique to document databases. Other database systems also optimize locality:
+
+1.Google Spanner allows relational tables to be interleaved for better locality.
+2.Oracle supports multi-table index cluster tables.
+3.Bigtable-based databases (Cassandra, HBase) use column families to manage locality.
+
 
 
 
