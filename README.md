@@ -29,7 +29,7 @@ Systems are built using a combination of:
 
 A well-designed data system should focus on three core principles:
 
-## Reliability
+### Reliability
 
 Ensures the system continues functioning correctly despite faults.
 
@@ -39,7 +39,7 @@ Mitigating Software Bugs: Implement process isolation, self-checking mechanisms,
 
 Preventing Human Errors: Design safe defaults, enable rollbacks, and use monitoring tools.
 
-## Scalability
+### Scalability
 
 Ensures the system can handle increasing amounts of data and traffic.
 
@@ -49,7 +49,7 @@ Replication: Keeping multiple copies of data for fault tolerance.
 
 Indexing & Caching: Improving query performance.
 
-## Maintainability
+### Maintainability
 
 Ensures the system remains easy to modify and extend over time.
 
