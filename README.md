@@ -60,5 +60,77 @@ Automation: Prevents human errors.
 Observability: Logging and monitoring for troubleshooting.
 
 
+## How Important Is Reliability?
+Reliability is critical in all applications, not just in high-stakes industries like nuclear power or aviation. Business applications with bugs can lead to lost productivity, financial errors, and legal risks. Even in non-critical applications, data loss can severely impact users. While reliability may sometimes be sacrificed for cost-saving purposes, such decisions should be made consciously and carefully.
+
+## Scalability
+A system that functions well today may not necessarily perform well under increased load. Scalability refers to a system’s ability to handle growth efficiently. Instead of simply labeling a system as “scalable” or “not scalable,” we should analyze how it copes with growth and what strategies can be employed to manage increased demand.
+
+## Describing Load
+To assess scalability, it is essential to define load parameters, such as:
+
+Requests per second on a web server
+Read/write ratios in a database
+Active users in a chatroom
+Cache hit rates
+A real-world example is Twitter, which initially stored tweets in a centralized manner, making timeline queries inefficient. To improve performance, Twitter switched to a model where each user has a precomputed timeline cache. However, this introduced challenges when users with millions of followers posted tweets, requiring a balance between real-time computation and storage efficiency.
+
+## Describing Performance
+Performance can be evaluated in two ways:
+
+Impact of increased load on performance (keeping resources the same)
+Required resource expansion to maintain consistent performance under higher load
+### Latency vs. Response Time
+Latency: The time a request spends waiting to be processed.
+Response Time: The total time taken to process a request, including delays.
+Response times vary due to factors such as network congestion, CPU scheduling, garbage collection pauses, and disk reads.
+
+## Approaches for Coping with Load
+As load parameters increase, maintaining good performance requires rethinking system architecture. Scaling can be done in two primary ways:
+
+#### Scaling Up (Vertical Scaling) – Moving to a more powerful machine.
+#### Scaling Out (Horizontal Scaling) – Distributing the load across multiple smaller machines (shared-nothing architecture).
+A single-node system is often simpler, but high-end machines become expensive, making horizontal scaling necessary for intensive workloads. Many modern architectures use a pragmatic combination of both approaches.
+
+### Elastic vs. Manual Scaling:
+
+Elastic systems automatically adjust computing resources based on demand.
+Manually scaled systems require human intervention but are often simpler and more predictable.
+### Stateful vs. Stateless Systems:
+
+Stateless services are easy to distribute across multiple machines.
+Stateful data systems require more complex distributed setups. Traditionally, databases were scaled vertically, but better distributed system tools may make horizontal scaling the default in the future.
+Scalability: No One-Size-Fits-All Solution
+Different applications require different scalable architectures, depending on factors like:
+
+Read/write volume
+Data storage needs
+Complexity of data
+Response time requirements
+For example, a system handling 100,000 requests per second (1 kB each) differs from one handling 3 requests per minute (2 GB each), even if both have the same total data throughput. Scalable architectures must be designed based on expected workload patterns.
+
+### Maintainability: The Cost of Software Is in Its Maintenance
+Most software costs come from ongoing maintenance rather than initial development. Legacy systems can be difficult to maintain, so software should be designed for long-term usability. Three key principles help improve maintainability:
+
+Operability – Make it easy for operations teams to keep the system running smoothly.
+Simplicity – Reduce unnecessary complexity to make the system easier to understand.
+Evolvability – Ensure the system can be easily adapted for new use cases and future changes.
+Operability: Helping Operations Teams Manage Systems
+Operations teams handle tasks such as monitoring, troubleshooting failures, keeping systems updated, and ensuring security. Good operability makes routine tasks easier and prevents operational surprises.
+
+
+Key strategies for reducing complexity:
+
+Remove accidental complexity (implementation details that do not contribute to solving the problem).
+Use abstractions to simplify interactions and hide unnecessary details (e.g., high-level programming languages hide machine code).
+Design reusable components to improve efficiency and software quality.
+Evolvability: Designing for Change
+Software requirements will inevitably change over time due to business needs, regulations, or system growth. A system designed with evolvability in mind is easier to modify and adapt.
+
+
+
+
+
+
 
 
