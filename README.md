@@ -1,6 +1,5 @@
 # designing-data-intensive-applications
 __________
-Designing Data-Intensive Applications
 
 This repository contains key insights and notes from Designing Data-Intensive Applications by Martin Kleppmann. The book explores the fundamental principles behind scalable, reliable, and maintainable data systems.
 
@@ -10,27 +9,27 @@ Modern applications are increasingly data-intensive rather than compute-intensiv
 
 Key Concepts
 
-1. Data-Intensive vs. Compute-Intensive Applications
+## 1. Data-Intensive vs. Compute-Intensive Applications
 
 CPU is rarely the bottleneck; instead, challenges arise from data volume, complexity, and speed.
 
 Systems are built using a combination of:
 
-Databases (e.g., PostgreSQL, MongoDB)
+### Databases (e.g., PostgreSQL, MongoDB)
 
-Caches (e.g., Redis, Memcached)
+### Caches (e.g., Redis, Memcached)
 
-Search Indexes (e.g., Elasticsearch, Apache Solr)
+### Search Indexes (e.g., Elasticsearch, Apache Solr)
 
-Stream Processing Systems (e.g., Apache Kafka, Flink)
+### Stream Processing Systems (e.g., Apache Kafka, Flink)
 
-Batch Processing Systems (e.g., Apache Hadoop, Spark)
+### Batch Processing Systems (e.g., Apache Hadoop, Spark)
 
-2. Design Goals of Data Systems
+## 2. Design Goals of Data Systems
 
 A well-designed data system should focus on three core principles:
 
-Reliability
+## Reliability
 
 Ensures the system continues functioning correctly despite faults.
 
@@ -40,7 +39,7 @@ Mitigating Software Bugs: Implement process isolation, self-checking mechanisms,
 
 Preventing Human Errors: Design safe defaults, enable rollbacks, and use monitoring tools.
 
-Scalability
+## Scalability
 
 Ensures the system can handle increasing amounts of data and traffic.
 
@@ -50,7 +49,7 @@ Replication: Keeping multiple copies of data for fault tolerance.
 
 Indexing & Caching: Improving query performance.
 
-Maintainability
+## Maintainability
 
 Ensures the system remains easy to modify and extend over time.
 
@@ -60,7 +59,6 @@ Automation: Prevents human errors.
 
 Observability: Logging and monitoring for troubleshooting.
 
-Conclusion
 
-This book provides a deep dive into the core principles behind modern data systems. By understanding reliability, scalability, and maintainability, developers can build robust applications capable of handling real-world challenges.
+
 
