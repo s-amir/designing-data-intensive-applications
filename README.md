@@ -201,7 +201,7 @@ Example: If you have a clustered index on id and create a non-clustered index on
 So, non-clustered indexes help speed up queries without changing how the data is stored in the table.   
 
 ### summary 
-Clustered Index: Best for the primary key, range queries, and when there is a need to keep the data sorted.
-Non-Clustered Index: Useful for speeding up lookups on non-primary key columns, allowing multiple indexes, and maintaining a flexible table structure.
+Clustered Index: Best for the primary key, range queries, and when there is a need to keep the data sorted.   
+Non-Clustered Index: Useful for speeding up lookups on non-primary key columns, allowing multiple indexes, and maintaining a flexible table structure.   
 
 
