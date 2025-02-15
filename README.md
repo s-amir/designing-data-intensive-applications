@@ -174,6 +174,20 @@ This index creates a hash map (hash table) in memory. When you want to fetch a k
 The time complexity is O(1) for lookups.   
 It is not suitable for range queries (e.g., finding values between a range).    
 The hash index must fit entirely in memory, and the storage is append-only. When a value is updated, the new value is appended to the end of the log, and the system periodically performs compaction to remove old versions and reduce storage.   
+
+## binary tree
+data persist in tree   
+disadvantage: not balanced (unbalanced tree)   
+
+## BTree (Balanced Tree)  
+this tree change root automatically to create balanced tree  
+
+## B+ Tree 
+B+ Tree is useful for range query (find near data)    
+each node point to two node (ochild and next data)  
+![image](https://github.com/user-attachments/assets/646337c6-3abf-4f3b-be23-16e0c2ce4a3b)  
+B+ Tree is also useful in size because we can persist upper portion of index in memory which is just pointer and downer portion in disk which is larger and has addreess of values  
+
   
 
 
