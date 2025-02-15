@@ -188,11 +188,17 @@ each node point to two node (ochild and next data)
 ![image](https://github.com/user-attachments/assets/646337c6-3abf-4f3b-be23-16e0c2ce4a3b)  
 B+ Tree is also useful in size because we can persist upper portion of index in memory which is just pointer and downer portion in disk which is larger and has addreess of values  
 
-  
+## clusterd index :
+Each table can only maintain one cluster index ,  the cluster index has the same index as the data in the table sort (so we can have only one cluster index per table)  
+In cluster index if you change the id (if index is based on id) the index must be change too   
+Unlike non-clustered indexes that store references to rows, a clustered index stores the actual row data. When you search using the clustered index, it directly points to the row in the table, not just a reference.
 
-
-
-
+## nonclusterd index
+It stores the indexed column(s) and pointers to the actual rows in the table, but does not change the table’s row order.  
+You can have multiple non-clustered indexes on different columns.  
+The actual data is stored in the table, and the index points to it. This is different from a clustered index, which stores the data in the same order as the index.  
+Example: If you have a clustered index on id and create a non-clustered index on name, the non-clustered index stores name values and pointers to where the actual name data is in the table.   
+So, non-clustered indexes help speed up queries without changing how the data is stored in the table.   
 
 
 
