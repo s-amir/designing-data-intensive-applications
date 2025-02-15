@@ -170,11 +170,11 @@ Imperative: More control, but requires specifying each step, which can be more c
 ___
 ____
 ## Hash Index:
-This index creates a hash map (hash table) in memory. When you want to fetch a key, it computes the hash of the key and directly finds the offset of the value in memory.
-The time complexity is O(1) for lookups.
-It is not suitable for range queries (e.g., finding values between a range).
-The hash index must fit entirely in memory, and the storage is append-only. When a value is updated, the new value is appended to the end of the log, and the system periodically performs compaction to remove old versions and reduce storage.
-
+This index creates a hash map (hash table) in memory. When you want to fetch a key, it computes the hash of the key and directly finds the offset of the value in memory.   
+The time complexity is O(1) for lookups.   
+It is not suitable for range queries (e.g., finding values between a range).    
+The hash index must fit entirely in memory, and the storage is append-only. When a value is updated, the new value is appended to the end of the log, and the system periodically performs compaction to remove old versions and reduce storage.   
+  
 
 
 
