@@ -204,5 +204,11 @@ So, non-clustered indexes help speed up queries without changing how the data is
 Clustered Index: Best for the primary key, range queries, and when there is a need to keep the data sorted.   
 Non-Clustered Index: Useful for speeding up lookups on non-primary key columns, allowing multiple indexes, and maintaining a flexible table structure.   
 
-## Which index is better for frequently changed column ?   
+### Which index is better for frequently changed column ?   
 if a column changes a lot (like someone's name), a non-clustered index is better because it just updates the pointer in the index without changing the actual data order. A clustered index would require physically moving rows in the table, which is slower.  
+
+## concatenated index (Multi columns index) : 
+we can create index based on multiple column   
+for example lat and lon   
+if we use first column of index in the query , the index is still useful but if we use second column alone it does not effecient 
+  
