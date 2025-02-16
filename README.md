@@ -211,4 +211,8 @@ if a column changes a lot (like someone's name), a non-clustered index is better
 we can create index based on multiple column   
 for example lat and lon   
 if we use first column of index in the query , the index is still useful but if we use second column alone it does not effecient 
+
+## OLAP and OLTP
+![image](https://github.com/user-attachments/assets/6c5dc4de-4484-4c84-b616-f1767b1c94e3)
+
   
