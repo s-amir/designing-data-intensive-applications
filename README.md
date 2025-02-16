@@ -224,6 +224,10 @@ The schema’s name comes from its star-like structure when visualized, with the
 A snowflake schema is a variation where dimensions are further normalized into sub-dimensions.    
 In snowflake schemas, dimension tables are broken into more granular tables (e.g., separate tables for product brands and categories).     
 Snowflake schemas are more normalized than star schemas, making them more complex but potentially saving storage.    
-Star schemas are often preferred in analytics due to their simplicity and ease of use for analysts.   
+Star schemas are often preferred in analytics due to their simplicity and ease of use for analysts. 
+
+## Column Oriented
+goods at OLAP query , Column compression due to data similarity and single type , better cache 
+### sort column by insertion time or specific column.
 
   
