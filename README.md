@@ -232,7 +232,7 @@ goods at OLAP query , Column compression due to data similarity and single type 
 
 
 ## Two dimension of data cube:
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/da990988-57f5-426e-94ff-73e0b5a2aa1d)
 
 
   
