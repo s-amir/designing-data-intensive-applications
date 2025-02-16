@@ -34,3 +34,7 @@ MessagePack, Avro, Thrift (other efficient binary formats)
 when we use json(human readable) it make whole json to binary format to transfer contain : , { , } and etc...   
 But in protobuf it convert real object to binary without : { } , so it cause less size   
 in addition REST use more overheads like metadata of http while gRPC does not contain them.  
+
+### important note :
+problem with native language encoding format :   
+if language native format (like pickle in python ,java.io.Serializable in java ... ) used , the other side should use same langugae   
