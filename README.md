@@ -228,6 +228,11 @@ Star schemas are often preferred in analytics due to their simplicity and ease o
 
 ## Column Oriented
 goods at OLAP query , Column compression due to data similarity and single type , better cache 
-### sort column by insertion time or specific column.
+#### sort column by insertion time or specific column.  
+
+
+## Two dimension of data cube:
+![Uploading image.png…]()
+
 
   
