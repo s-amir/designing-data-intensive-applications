@@ -215,4 +215,15 @@ if we use first column of index in the query , the index is still useful but if 
 ## OLAP and OLTP
 ![image](https://github.com/user-attachments/assets/6c5dc4de-4484-4c84-b616-f1767b1c94e3)
 
+
+## Star and Snowflake Schema:
+A star schema is a data model used in data warehouses with a central fact table surrounded by dimension tables.
+The fact table captures transactional events, like customer purchases or website clicks, and contains foreign keys to dimension tables.
+Dimension tables store descriptive attributes (e.g., product details, store information), answering questions like "who, what, where, when."
+The schema’s name comes from its star-like structure when visualized, with the fact table at the center.
+A snowflake schema is a variation where dimensions are further normalized into sub-dimensions.
+In snowflake schemas, dimension tables are broken into more granular tables (e.g., separate tables for product brands and categories).
+Snowflake schemas are more normalized than star schemas, making them more complex but potentially saving storage.
+Star schemas are often preferred in analytics due to their simplicity and ease of use for analysts.
+
   
