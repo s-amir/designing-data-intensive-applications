@@ -1,6 +1,15 @@
 # designing-data-intensive-applications
 __________
+- [Chapter 1: Introduction](./encodingandevolution)
+- [Chapter 2: Data Models](chapters/chapter-2/README.md)
+- [Chapter 3: Storage and Retrieval](chapters/chapter-3/README.md)
+- [Chapter 4: Encoding and Compression](chapters/chapter-4/README.md)
 
+
+
+
+
+_______
 This repository contains key insights and notes from Designing Data-Intensive Applications by Martin Kleppmann. The book explores the fundamental principles behind scalable, reliable, and maintainable data systems.
 
 Overview
