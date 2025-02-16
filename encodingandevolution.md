@@ -37,4 +37,8 @@ in addition REST use more overheads like metadata of http while gRPC does not co
 
 ### important note :
 problem with native language encoding format :   
-if language native format (like pickle in python ,java.io.Serializable in java ... ) used , the other side should use same langugae   
+if language native format (like pickle in python ,java.io.Serializable in java ... ) used , the other side should use same langugae  (Not Cross-Language)
+Some serialization formats allow loading arbitrary classes during deserialization, which an attacker can exploit. 
+Built-in serializers are often inefficient in both CPU time and encoded data size.  
+Use JSON, Protobuf, Avro, or other data formats that don’t allow arbitrary code execution.  
+
