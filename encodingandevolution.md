@@ -1,4 +1,5 @@
-### rolling update : apply updated code to some node and if that's okay  to apply on others (no down time)  
+### rolling update :
+apply updated code to some node and if that's okay  to apply on others (no down time)  
 
 ### Backward compatibility:  
 Newer code can read data that was written by older code.  
@@ -28,3 +29,8 @@ JSON (human-readable, text-based, widely used in REST APIs)
 XML (verbose but structured, used in older systems)  
 Protocol Buffers (Protobuf) (compact binary format used in gRPC)  
 MessagePack, Avro, Thrift (other efficient binary formats)  
+
+#### Example
+when we use json(human readable) it make whole json to binary format to transfer contain : , { , } and etc...   
+But in protobuf it convert real object to binary without : { } , so it cause less size   
+in addition REST use more overheads like metadata of http while gRPC does not contain them.  
