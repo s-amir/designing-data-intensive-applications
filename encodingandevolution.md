@@ -42,3 +42,14 @@ Some serialization formats allow loading arbitrary classes during deserializatio
 Built-in serializers are often inefficient in both CPU time and encoded data size.    
 Use JSON, Protobuf, Avro, or other data formats that don’t allow arbitrary code execution.  
 
+
+### JSON and BSON :
+1. JSON is a text-based, human-readable format used for APIs and web data exchange, but it is larger and slower to parse.   
+2. BSON is a binary format optimized for speed and efficiency, used mainly in MongoDB, supporting extra data types like ObjectId and Date.   
+3. JSON is readable but slower, while BSON is compact and faster for database operations.
+
+### Apache Thrift and Protocol buffer :  
+they are some serialization framework which obey from schema   
+##### these protocol has backward and forward compatibility   
+
+
