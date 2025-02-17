@@ -52,4 +52,13 @@ Use JSON, Protobuf, Avro, or other data formats that don’t allow arbitrary cod
 they are some serialization framework which obey from schema   
 ##### these protocol has backward and forward compatibility   
 
+### AVRO
+AVRO is a binary serialization format developed within the Hadoop ecosystem, commonly used for efficient data storage and transmission. Its key features include:  
+
+Compact and Fast: AVRO is designed to be compact, enabling efficient storage and faster data processing.  
+Schema-based: It uses a schema (written in JSON) to define the structure of data, ensuring that both producer and consumer know the format in advance.  
+Dynamic Typing: AVRO supports dynamic typing, allowing data to be processed even if the schema evolves over time.  
+Cross-language Support: It provides libraries for many programming languages (e.g., Java, Python, C++) for seamless integration.   
+Compression: AVRO supports efficient compression techniques like Snappy, making it suitable for large data processing.  
+
 
