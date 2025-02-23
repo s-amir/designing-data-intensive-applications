@@ -12,5 +12,16 @@ one problem in multi-leader replication system is conflict with changes (requiri
 1. LWW last write wins (may cause data lost)
 2. Somehow merge the values together
 3. use seperate programe to handle it
+4. ![image](https://github.com/user-attachments/assets/262d51d2-b7a8-4da4-ab81-ff956100c438)
 
+### Dynamo-style (like cassandra)
+this fashionable architecture is leaderless approach where client send multiple request for write to several replicas (while in others, a coordinator node does this on behalf of the client)
+#### Write Request Flow:
+When a client sends a write request:
+Coordinator Node: The client can connect to any node in the cluster. The chosen node acts as the coordinator, handling the request.     
+Replication to Nodes: The coordinator forwards the write to all replicas responsible for the data (based on the partition key and replication factor).    
+
+and also read request is paralle , means a client connect to chosen node which is coordinator and it sends request to other nodes to get data   
+if there are multiple value it returns the newest ones   
+Cassandra ensures that there is always at least one replica with the latest data  
 
