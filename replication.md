@@ -33,20 +33,20 @@ Causal versioning is a technique used in distributed systems to maintain causal 
 Causal Consistency: If operation B is causally dependent on operation A, then all replicas must see A before B.
 Avoids Anomalies: Prevents scenarios where a user sees a reply to a message before seeing the message itself.
 🚦 Example:
-Client 1: Adds milk to the cart → Operation A
-Client 2: Sees milk and adds eggs → Operation B
-All replicas must apply A before B to maintain causal consistency.
-### 🕒 Vector Versioning:
-Vector versioning (using vector clocks) is a method to track causality in distributed systems. It assigns a vector of counters to each replica or node, allowing the system to determine the causal relationship between operations.
+Client 1: Adds milk to the cart → Operation A  
+Client 2: Sees milk and adds eggs → Operation B   
+All replicas must apply A before B to maintain causal consistency.  
+### 🕒 Vector Versioning:   
+Vector versioning (using vector clocks) is a method to track causality in distributed systems. It assigns a vector of counters to each replica or node, allowing the system to determine the causal relationship between operations.   
+ 
+Detects Conflicts: Shows if updates are sequential (one happened before another) or concurrent (happened independently).  
+Not a Conflict Resolver: It only detects conflicts but doesn't resolve them.   
+🔗 Example:  
+Version Vector: [1, 2, 0]  
 
-Detects Conflicts: Shows if updates are sequential (one happened before another) or concurrent (happened independently).
-Not a Conflict Resolver: It only detects conflicts but doesn't resolve them.
-🔗 Example:
-Version Vector: [1, 2, 0]
+3 Replicas: R1, R2, R3  
+R1: Processed 1 update, R2: Processed 2 updates, R3: No updates.   
+Conflict Detection:    
 
-3 Replicas: R1, R2, R3
-R1: Processed 1 update, R2: Processed 2 updates, R3: No updates.
-Conflict Detection:
-
-Comparing [1, 2, 0] and [1, 1, 1] indicates concurrent updates (since neither is greater than the other).
+Comparing [1, 2, 0] and [1, 1, 1] indicates concurrent updates (since neither is greater than the other).   
 
