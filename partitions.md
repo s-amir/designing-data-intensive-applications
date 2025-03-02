@@ -63,3 +63,23 @@ Dynamic Partitioning adjusts the number of partitions automatically based on dat
 Splitting occurs when a partition exceeds a set size (e.g., 10GB in HBase).  
 Merging happens when partitions become too small due to deletions.  
 Rebalancing moves split partitions to other nodes for load distribution.  
+
+
+** pay attention that automatic rebalancing can cause problem:  
+False Failure Detection – A temporarily slow node may be wrongly considered failed.  
+Unnecessary Data Movement – The system moves large amounts of data, increasing network and disk load.  
+Overloading Healthy Nodes – Other nodes take extra load, potentially slowing them down too.  
+Cascading Failures – More nodes become overloaded, triggering further rebalancing, risking a full system crash.  
+🔹 Key Issue: Overreacting to temporary slowdowns can worsen system performance instead of stabilizing it.  
+
+
+### Request Routing: which data , where ?!
+#### service discovery : connect to which node which port!
+1. connect to any node : can connect to each node , if node does not have data request forwarded to appropraite node
+2. routing tier first: request firest sent to routing tier and this service act as a partition-aware load balancer. (coordination service such as Zoo‐
+Keeper to keep track of this cluster metadata)  
+3. client aware of partitioning
+
+   ![image](https://github.com/user-attachments/assets/4693e794-2c39-43c7-b05e-c577c6a4aa92)
+
+
