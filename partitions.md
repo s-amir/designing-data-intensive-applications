@@ -42,3 +42,24 @@ problem: if i want to search forexample red cars , i must search on all partitio
  This global index create index of secondary column/field which cause slower write and update but improve read speed.
  A query on "color:red" first checks the global index, then fetches records from the correct partitions (instead of scanning all partitions).  
 
+
+ ### rebalancing 
+
+How not to do it: hash mod N
+by changing the number of nodes (N) the partition number changed
+
+### Understanding Fixed Number of Partitions
+the fixed number of partitions cause adding and removing node is easy 
+by adding more nodes the number of partition of each node reduce and by removing the number of each node rduced
+problems:
+❌ Choosing the Right Number is Hard: If partitions are too big, rebalancing is expensive; if too small, management overhead increases.
+❌ Dataset Growth Issues: If data grows beyond expectations, the fixed number of partitions may limit scalability.
+
+![image](https://github.com/user-attachments/assets/6e3da6c2-39bd-4624-ae1a-5b3123233edb)
+
+
+### dynamic partitions:
+Dynamic Partitioning adjusts the number of partitions automatically based on data size.  
+Splitting occurs when a partition exceeds a set size (e.g., 10GB in HBase).  
+Merging happens when partitions become too small due to deletions.  
+Rebalancing moves split partitions to other nodes for load distribution.  
