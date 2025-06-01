@@ -1,6 +1,7 @@
 # designing-data-intensive-applications
 __________
 - [Encoding and evolution](./encodingandevolution)
+- [Chapter 1: reliability,scalability,maintainability] (chapters/chapter-1/README.md)
 - [Chapter 2: Data Models](chapters/chapter-2/README.md)
 - [Chapter 3: Storage and Retrieval](chapters/chapter-3/README.md)
 - [Chapter 4: Encoding and Compression](chapters/chapter-4/README.md)
